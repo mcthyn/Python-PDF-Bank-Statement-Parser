@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "gpay-parser"
+version = "0.1.0"
+description = "CLI tool to extract and export Google Pay transaction history from PDF statements."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Riyas Binumer", email = "muhammadriyask11@email.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+  "pdfplumber",
+  "pandas"
+]
+
+
+[project.scripts]
+gpay-parser = "main:main"
+
+
+[tool.setuptools]
+py-modules = ["main"]

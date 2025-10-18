@@ -1,3 +1,5 @@
 media/
 venv
 output/
+dist/
+gpay_parser.egg-info
