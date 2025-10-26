@@ -7,3 +7,5 @@ gpay_parser.egg-info
 *.spec
 build/
 *__pycache__/
+new.py
+*.json
