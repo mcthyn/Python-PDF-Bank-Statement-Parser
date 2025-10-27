@@ -24,7 +24,7 @@ def extract_transaction_blocks(pdf_path: str) -> list:
     transaction_block = match.group(1).strip() if match else ""
     cleaned_transactions = clean_text(transaction_block)
 
-    pattern = r'(Chq:\s*\S+)'
+    pattern = r'(Chq:\s*\d*)'
     parts = re.split(pattern, cleaned_transactions)
 
     # Capture the Chq: pattern in parentheses, then rejoin it into the previous chunk.
@@ -55,22 +55,20 @@ def parse_transaction(block: str) -> dict:
     balance_match = re.findall(r'(\d{1,3}(?:,\d{3})*\.\d{2})', block)
     balance = balance_match[-1] if balance_match else None
 
-    # --- Extract deposits / withdrawals ---
-    deposit, withdrawal = None, None
+    # --- Extract amount ---
     if len(balance_match) >= 2:
         amount = balance_match[-2]
-        # Heuristic: presence of "CR" or "NEFT/CR" → deposit
-        if re.search(r'\bCR\b', block, re.IGNORECASE):
-            deposit = amount
-        else:
-            withdrawal = amount
 
     # --- Extract transaction type ---
     txn_type_match = re.search(
-        r'\b(UPI/DR|UPI/CR|NEFT CR|NEFT DR|IMPS/CR|IMPS/DR|ATM/DR|POS/DR|INT/CR)\b',
+        r'\b(UPI/DR|UPI/CR|NEFT CR|NEFT DR|SBINT|IMPS/CR|IMPS/DR|ATM/DR|POS/DR|INT/CR)\b',
         block
     )
     txn_type = txn_type_match.group(1) if txn_type_match else "UNKNOWN"
+
+    # --- Extract time ---
+    time_match = re.search(r'\d{2}:\d{2}:\d{2}', block)
+    time = time_match.group(0) if time_match else None
 
     # --- Extract particulars (the messy middle) ---
     particulars = re.sub(
@@ -81,16 +79,34 @@ def parse_transaction(block: str) -> dict:
 
     particulars = re.sub(r'\s+', ' ', particulars)  # normalize spaces
 
+    # --- Extract Party name ---
+    party = None
+    if txn_type.startswith("UPI"):
+        party = block.split("/")[3].replace("\n", "")
+
+    elif txn_type.startswith("NEFT"):
+        party = particulars.split("-")[-2]
+
     return {
         "date": date,
+        "time": time,
         "txn_type": txn_type,
+        "party": party,
         "particulars": particulars,
-        "deposit": deposit,
-        "withdrawal": withdrawal,
+        "amount": amount,
         "balance": balance,
         "cheque_no": cheque_no,
     }
 
+
+
+def to_table(transactions: list, save=False, output_path="output.csv") -> pd.DataFrame:
+    df = pd.DataFrame(transactions)
+
+    if save:
+        df.to_csv(output_path)
+
+    return df
 
 
 
@@ -98,9 +114,4 @@ def parse_transaction(block: str) -> dict:
 
 transaction_blocks = extract_transaction_blocks("media/canara_statement.pdf")
 transactions = [parse_transaction(block) for block in transaction_blocks]
-
-for b in transactions:
-    print(b, end='\n')
-    print("*"*40)
-
-print("length: ", len(transactions))
+transactions_df = to_table(transactions, save=True)
