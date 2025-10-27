@@ -12,7 +12,9 @@ def main():
 
     "For Canara statements"
     canara_df = canara_parser(pdf_path)
-    canara_df.to_csv(f"output/{pdf_path.split("/")[-1].replace(".pdf", "")}_result.csv", index=False, encoding="utf-8-sig")
+    output_path = f"output/{pdf_path.split("/")[-1].replace(".pdf", "")}_result.csv"
+    canara_df.to_csv(output_path, index=False, encoding="utf-8-sig")
+    print(f"File saved to {output_path}")
 
     "For GPay statements"
     # gpay_df = gpay_parser(pdf_path)

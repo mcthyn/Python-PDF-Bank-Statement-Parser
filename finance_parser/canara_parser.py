@@ -100,18 +100,12 @@ def parse_transaction(block: str) -> dict:
 
 
 
-def to_table(transactions: list, save=False, output_path="output.csv") -> pd.DataFrame:
-    df = pd.DataFrame(transactions)
-
-    if save:
-        df.to_csv(output_path)
-
-    return df
+def to_table(transactions: list) -> pd.DataFrame:
+    return pd.DataFrame(transactions)
 
 
 
-
-
-transaction_blocks = extract_transaction_blocks("media/canara_statement.pdf")
-transactions = [parse_transaction(block) for block in transaction_blocks]
-transactions_df = to_table(transactions, save=True)
+def canara_parser(pdf_path: str) -> pd.DataFrame:
+    transaction_blocks = extract_transaction_blocks(pdf_path)
+    transactions = [parse_transaction(block) for block in transaction_blocks]
+    return to_table(transactions)
