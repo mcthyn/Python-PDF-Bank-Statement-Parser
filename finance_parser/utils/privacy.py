@@ -69,8 +69,7 @@ def sanitize_transactions(df: pd.DataFrame, level: str, sensitive_fields: dict) 
 
     # Anonymized — drop everything sensitive
     if level == "anonymized":
-        all_sensitive = list(set(sensitive_fields.get("to_mask", []) + sensitive_fields.get("to_drop", [])))
-        df.drop(columns=[c for c in all_sensitive if c in df.columns], inplace=True)
+        df.drop(columns=[c for c in sensitive_fields if c in df.columns], inplace=True)
         return df
 
     return df
