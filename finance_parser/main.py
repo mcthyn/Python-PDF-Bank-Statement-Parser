@@ -61,7 +61,7 @@ def main():
       4. Exports the parsed transactions to CSV or JSON format.
 
     The output file is saved in the specified directory, with the original
-    PDF name suffixed by "_result".
+    PDF name suffixed by privacy level.
 
     Example:
         python main.py statements/canara.pdf -t canara -f json -o output
@@ -69,17 +69,24 @@ def main():
     args = parse_args()
     os.makedirs(args.output, exist_ok=True)
     pdf_name = os.path.splitext(os.path.basename(args.pdf_path))[0]
-    output_path = os.path.join(args.output, f"{pdf_name}_result")
+    output_path = os.path.join(args.output, f"{pdf_name}_{args.privacy}")
 
-    parser_func = canara_parser if args.type == "canara" else gpay_parser
+    parser_func, sensitive_fields = (
+        (canara_parser, CANARA_FIELDS)
+        if args.type == "canara"
+        else (gpay_parser, GPAY_FIELDS)
+    )
     df = parser_func(args.pdf_path)
+    df = sanitize_transactions(df, args.privacy, sensitive_fields)
 
     # Save to CSV/JSON
     if args.format == "csv":
-        df.to_csv(f"{output_path}.csv", index=False, encoding="utf-8-sig")
+        output_file = f"{output_path}.csv"
+        df.to_csv(output_file, index=False, encoding="utf-8-sig")
     elif args.format == "json":
-        df.to_json(f"{output_path}.json", orient="records", indent=4, force_ascii=False)
-    print(f"✅ File saved to {output_path}")
+        output_file = f"{output_path}.json"
+        df.to_json(output_file, orient="records", indent=4, force_ascii=False)
+    print(f"✅ File saved to {output_file}")
 
 
 
