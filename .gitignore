@@ -12,3 +12,4 @@ new.py
 *.csv
 *.ipynb
 *.egg-info
+old_req.txt
