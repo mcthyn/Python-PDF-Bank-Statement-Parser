@@ -106,8 +106,8 @@ pip install camelot-py pdfplumber pandas
 
 ## 🧼 Example Output (CSV)
 
-| Date        | Party       | Particulars               | Deposit   | Withdrawal | Balance   |
-|-------------|-------------|---------------------------|------------|-------------|------------|
-| 2025-09-12  | Swiggy      | UPI/DR/Swiggy/AXIS/...    | 0.00       | 250.00      | 22,580.35  |
-| 2025-09-13  | ABC Pvt Ltd | Salary from ABC Pvt Ltd   | 50,000.00  | 0.00        | 72,580.35  |
+| Date        | Party       | Type  | Particulars               |  Amount | Balance   |
+|-------------|-------------|-------|---------------------------|---------|------------|
+| 2025-09-12  | Swiggy      | DR    | UPI/DR/Swiggy/AXIS/...    | 250.00  | 22,580.35  |
+| 2025-09-13  | ABC Pvt Ltd | CR    | Salary from ABC Pvt Ltd   | 0.00    | 72,580.35  |
 
