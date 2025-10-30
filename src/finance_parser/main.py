@@ -23,7 +23,7 @@ def parse_args():
                           Options:
                             - full → includes all data (raw output)
                             - masked → partially hides sensitive data
-                            - anonymized → removes all sensitive information
+                            - clean → removes all sensitive information
 
     Returns:
         argparse.Namespace: Parsed command-line arguments.
@@ -54,9 +54,9 @@ def parse_args():
     )
     parser.add_argument(
         "-p", "--privacy",
-        choices=["full", "masked", "anonymized"],
-        default="full",
-        help="Privacy level for output data. Options: full (raw), masked, anonymized."
+        choices=["raw", "masked", "clean"],
+        default="masked",
+        help="Privacy level for output data. Options: raw, masked, clean."
     )
     return parser.parse_args()
 
@@ -70,7 +70,7 @@ def main():
       1. Parses command-line arguments.
       2. Selects the appropriate parser (Canara Bank or GPay).
       3. Extracts and processes transactions from the given PDF.
-      4. Applies privacy settings (full, masked, anonymized) to the output data.
+      4. Applies privacy settings (full, masked, clean) to the output data.
       5. Exports the processed results in CSV or JSON format.
 
     Output files are saved in the specified directory, named using the
