@@ -2,9 +2,7 @@ import camelot, re
 import pandas as pd
 
 
-SENSITIVE_FIELDS = {
-    "upi_id": 0
-}
+SENSITIVE_FIELDS = ["upi_id"]
 
 
 def extract_transactions(pdf_path: str) -> list:
